@@ -1,0 +1,32 @@
+{
+  "name": "denver-backups",
+  "version": "0.1.0",
+  "author": "denver",
+  "summary": "A module to manage backups",
+  "license": "Apache-2.0",
+  "source": "https://github.com/dmcanally/denver-backups",
+  "project_page": "https://github.com/dmcanally/denver-backups/projects",
+  "issues_url": "https://github.com/dmcanally/denver-backups/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0 < 4.25.1"},
+    {"name":"phinze-sudoers","version_requirement":">= 0.1.3"}
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7",
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04",
+        "16.04"
+      ]
+    }
+  ],
+  "data_provider": null
+}
+

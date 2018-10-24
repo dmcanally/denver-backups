@@ -1,0 +1,6 @@
+fixtures:
+  repositories:
+    stdlib:        'https://github.com/puppetlabs/puppetlabs-stdlib.git'
+    sudoers:       'https://github.com/phinze/puppet-sudoers.git'
+  symlinks:
+    backpus: "#{source_dir}"
