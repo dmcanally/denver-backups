@@ -10,7 +10,10 @@ describe 'backups::backup' do
       end
 
       let :pre_condition do
-        "include ::backups"
+        "class { '::backups':
+           gpg_keyfile => 'pubkey.gpg',
+           gpg_keyid   => 'mykey',
+        }"
       end
 
       describe 'file backup' do

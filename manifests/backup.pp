@@ -3,16 +3,16 @@ define backups::backup (
   Enum['pg_db','mysql_db','file'] $backup_type  = undef,
   Optional[Stdlib::Absolutepath] $backup_file   = undef,
   Optional[String] $backup_db                   = undef,
-  Stdlib::Absolutepath $backup_storage_path     = $::backups::backup_storage_path,
+  Stdlib::Absolutepath $backup_dir              = $::backups::backup_dir,
   String $backup_user                           = $::backups::backup_user,
   Integer $cron_hour                            = $::backups::cron_hour,
   Integer $cron_minute                          = $::backups::cron_minute,
-  String $gpg_keyname                           = $::backups::gpg_keyname,
-  String $gpg_keyuid                            = $::backups::gpg_keyuid,
+  String $gpg_keyfile                           = $::backups::gpg_keyfile,
+  String $gpg_keyid                             = $::backups::gpg_keyid,
 
 ) {
 
-  $gpg_cmd = "gpg -z 9 -r ${gpg_keyuid} -e > ${backup_storage_path}"
+  $gpg_cmd = "gpg -z 9 -r ${gpg_keyid} -e > ${backup_dir}"
 
   case $backup_type {
     'pg_db': {

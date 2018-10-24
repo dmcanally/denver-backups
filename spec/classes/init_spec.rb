@@ -17,6 +17,8 @@ describe 'backups' do
 
       describe "apply backups on #{os}" do
         let(:overridden_params) do {
+          :gpg_keyfile => 'pubkey.gpg',
+          :gpg_keyid   => 'mykey',
         } end
 
         it { should compile.with_all_deps }

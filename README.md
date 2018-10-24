@@ -1,5 +1,11 @@
 # base
 
+[![Build Status](https://travis-ci.org/dmcanally/denver-backups.svg?branch=master)](https://travis-ci.org/dmcanally/denver-backups)
+[![Code Coverage](https://coveralls.io/repos/github/dmcanally/denver-backups/badge.svg?branch=master)](https://coveralls.io/github/dmcanally/denver-backups)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/denver/backups.svg)](https://forge.puppetlabs.com/denver/backups)
+[![Puppet Forge - downloads](https://img.shields.io/puppetforge/dt/denver/backups.svg)](https://forge.puppetlabs.com/denver/backups)
+[![Puppet Forge - scores](https://img.shields.io/puppetforge/f/denver/backups.svg)](https://forge.puppetlabs.com/denver/backups)
+
 #### Table of Contents
 
 1. [Description](#description)
@@ -8,7 +14,7 @@
 
 ## Description
 
-This module will deploy a user, a public gpg key, and a cron job to create backup artifacts.
+This module will deploy a user to execute backups and a cron job to create encrypted backup artifacts.
 
 ## Usage
 
